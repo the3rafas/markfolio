@@ -1,0 +1,109 @@
+.loginForm {
+  border: 0.1rem solid;
+  border-radius: 0.4rem;
+  background-color: whitesmoke;
+  box-shadow: 0 0 6px 8px #f0f0f0;
+  width: 30rem;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginForm label {
+  display: block;
+  margin: 1rem 0;
+}
+.loginForm input {
+  display: block;
+  width: 90%;
+  margin: 0.6rem auto;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid #80808073;
+  transition: all 0.4s;
+}
+.loginForm input:hover {
+  border-bottom: 0.4rem solid #80808073;
+}
+.loginForm div {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.7rem;
+  margin: 1rem auto;
+}
+/* templet */
+.templet {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #0000008f;
+  animation: opacity 1s ease-out ;
+}
+.templet form {
+  width: 90%;
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 19px 7px blue;
+  border-radius: 0.6rem;
+  background-color: #fff;
+  padding: 1rem;
+}
+.templet form .formControl div {
+  margin: .3rem auto;
+  width: 90%;
+  display: flex;
+  background-color: #153984;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+.templet form label {
+  margin: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: aliceblue;
+}
+
+.templet form .formControl input,
+textarea {
+  width: 75%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  margin: 1.4rem auto;
+  border: none;
+}
+.templet form input[type=submit]{
+  background-color: transparent;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: .4rem;
+}
+.templet form input[type=submit]:hover{
+  background-color: #153984;
+  color: white;
+  transition: all .5s;
+}
+.templet form input[type=file]{
+  color: white;
+}
+
+.formControl{
+  display: flex ;
+  gap: 1rem;
+}
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+
+  }
+}

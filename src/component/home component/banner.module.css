@@ -1,0 +1,157 @@
+.banner {
+  background-color: saddlebrown;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+}
+.banner h1 {
+  text-transform: capitalize;
+  font-family: cursive;
+  
+}
+
+
+/*slide  */
+.slide {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  display: flex;
+}
+.textCon {
+  width: 88%;
+  height: 82%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.textCon h1 {
+  font-size: 7rem;
+  color: aliceblue;
+}
+.textCon span {
+  color: #854a21;
+  font-size: 4rem;
+}
+
+.name {
+  font-size: 8rem !important;
+  color: #402d6d !important;
+}
+.textCon p {
+  font-size: 2rem;
+  color: #854a218f;
+}
+.textCon button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  background-color: transparent;
+  border: 0.3rem solid #402d6d;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.textCon button:hover {
+  border: 0.3rem solid #854a218f;
+}
+.textCon a {
+  text-transform: capitalize;
+  color: #854a21;
+  font-weight: 800;
+}
+.iconCont {
+  display: flex;
+  gap: 0.3em;
+  align-self: flex-end;
+}
+/* card */
+.Card {
+  width: 27%;
+  margin: 3rem auto;
+  box-shadow: 0 0 11px 7px #854a21bf;
+  padding: 1rem;
+}
+.Card img {
+  width: 100%;
+  object-fit: fill;
+  height: 16rem;
+}
+
+.Card h2 {
+  text-transform: capitalize;
+}
+.Card p {
+  padding: 1.5rem;
+  color: #918787;
+  font-size: 1.2rem;
+}
+/*infoSlide  */
+.about {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  color: #854a21bf;
+}
+.infoSlide {
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 4rem;
+}
+.info {
+  box-shadow: 0 0 11px 7px #402d6d;
+  width: 40%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.info details {
+  padding: 1rem;
+  border: 0.1rem solid #854a21bf;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.info details[open] {
+  box-shadow: 0 0 14px 0px #b5b5b5;
+}
+
+@media only screen and (max-width: 920px) {
+  .Card {
+    width: 33%;
+  }
+  .info {
+    width: 100%;
+  }
+  .textCon h1 {
+    font-size: 5rem;
+  }
+
+}
+@media only screen and (max-width: 670px) {
+  .Card {
+    width: 50%;
+  }
+  .name {
+    font-size: 5rem !important;
+  }
+  .banner h1{
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .iframe {
+    margin: auto;
+    width: 100%;
+    height: 36rem;
+  }
+  .info {
+    width: 100%;
+  }
+}
