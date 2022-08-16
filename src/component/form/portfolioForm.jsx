@@ -2,8 +2,12 @@ import { useEffect, useRef } from "react";
 import classes from "./form.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { action } from "../../store/index";
+import { useState } from "react";
 
 const PortoForm = (props) => {
+  const [img, setImg] = useState();
+  const [imgs, setImgs] = useState();
+
   const TitleRef = useRef();
   const descripRef = useRef();
   const mediaRef = useRef();
@@ -11,8 +15,17 @@ const PortoForm = (props) => {
   const loginId = useSelector((state) => state.user.loginID);
 
   const dispatch = useDispatch();
-
-  useEffect(() => {}, []);
+  console.log(img);
+  useEffect(() => {
+    if (img) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImgs(reader.result);
+      }; 
+      reader.readAsDataURL(img);
+    }
+  }, [img]);
+  console.log(imgs);
 
   const handelSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +33,7 @@ const PortoForm = (props) => {
       id: loginId,
       title: TitleRef.current.value,
       descrip: descripRef.current.value,
-      img: mediaRef.current.value,
+      img: imgs,
       link: linkRef.current.value,
     };
     dispatch(action.addtempFun(data));
@@ -51,22 +64,31 @@ const PortoForm = (props) => {
         <div className={classes.formControl}>
           <div>
             <label htmlFor="Link">Link</label>
-            <input type="text" name="Title" required ref={linkRef} />
+            <input type="text" name="link" required ref={linkRef} />
           </div>
         </div>
         <div className={classes.formControl}>
-        <div>
-          <label htmlFor="img">media</label>
-          <input
-            type="file"
-            name="media"
-            required
-            ref={mediaRef}
-            accept="image/*"
-          />
+          <div>
+            <label htmlFor="img">media</label>
+            <input
+              type="file"
+              name="media"
+              required
+              ref={mediaRef}
+              accept="image/*"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (file) {
+                  setImg(file);
+                }else{
+                setImg(null);
+
+                }
+              }}
+            />
+          </div>
         </div>
-        </div>
-       
+
         <input type="submit" value="submit" />
       </form>
     </div>

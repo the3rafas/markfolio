@@ -4,14 +4,14 @@ import Banner from "../component/home component/banner";
 import Card from "../component/home component/card";
 import Slide from "../component/home component/slide";
 import InfoSlide from "../component/home component/infoslide";
-
-
+import Pcard from "../component/portfolio component/pcard";
 
 import classes from "./pages.module.css";
 import Sec from "../ui/sec";
 
 const Home = () => {
   const params = useParams();
+  const templet = useSelector((state) => state.user.templets);
   const login = useSelector((state) => state.user.login);
   const name = useSelector((state) =>
     state.user.users.filter((e) => e.email === params.mail)
@@ -64,6 +64,19 @@ const Home = () => {
         </div>
       )}
       <InfoSlide />
+      <h1 className={classes.about}>Portfolios</h1>
+      <div className={classes.tempCont}>
+          {templet.map((e) => (
+            <Pcard
+              key={e.img}
+              title={e.title}
+              paragraph={e.descrip}
+              img={e.img}
+              link={e.link}
+              style={classes.temppportfolio}
+            />
+          ))}
+        </div>
     </div>
   );
 };

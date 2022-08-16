@@ -89,12 +89,12 @@
   font-size: 1.2rem;
 }
 /*infoSlide  */
-.about {
-  text-align: center;
-  width: 100%;
-  font-size: 3rem;
-  color: #854a21bf;
-}
+  .about {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    color: #854a21bf;
+  }
 .infoSlide {
   margin: 3rem auto;
   display: flex;

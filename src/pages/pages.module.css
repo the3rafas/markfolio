@@ -47,12 +47,24 @@
   font-size: 1.7rem;
   color: indigo;
 }
-.tempCont{
+.tempCont {
   display: flex;
   flex-wrap: wrap;
+  padding: 3rem;
+}
+.temppportfolio {
+  cursor: pointer;
+  width: 30% !important;
+  padding: 2rem !important;
+  border-radius: 5.2rem;
 
 }
-.temppportfolio{
-  cursor: pointer;
-  width: 35% !important;
+.temppportfolio img{
+  border-radius: 2rem;
+}
+.about {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  color: #854a21bf;
 }

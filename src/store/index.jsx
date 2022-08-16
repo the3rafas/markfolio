@@ -23,20 +23,24 @@ const data = createSlice({
     templets: [
       {
         id: "admin",
-        title: "mohamed",
+        title: "name",
         descrip:
-          "2000mohamed.arafa@gmail.com 2000mohamed.arafa@gmail.com 2000mohamed.arafa@gmail.com 2000mohamed.arafa@gmail.com 2000mohamed.arafa@gmail.com 2000mohamed.arafa@gmail.com",
+          "this site for....",
         img: "./images/card-2.jpg",
         link: "https://www.youtube.com/",
       },
       {
         id: "admin",
-        title: "mohamed",
-        descrip: "2000mohamed.arafa@gmail.com",
+        title: "name ",
+        descrip: "this site for....",
         img: "./images/card-1.jpg",
         link: "https://www.facebook.com/",
       },
     ],
+    portfolio:[
+  
+    ],
+
     login: insialStorage == null ? false : true,
     loginID: insialId,
   },
@@ -83,7 +87,7 @@ const data = createSlice({
       console.log(state.login);
     },
     addtempFun(state, action) {
-      state.templets.push(action.payload);
+      state.portfolio.push(action.payload);
   
     },
   },

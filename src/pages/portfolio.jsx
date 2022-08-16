@@ -9,8 +9,9 @@ import { useSelector } from "react-redux";
 
 const Portfolio = (props) => {
   const [show, setShow] = useState(false);
-  const templet = useSelector((state) => state.user.templets);
-  console.log(templet);
+  const templet = useSelector((state) => state.user.portfolio);
+  const loginID = useSelector((state) => state.user.loginID);
+  const selectedTemp = templet.filter(e=> e.id ===loginID)
   const addformHandeler = () => {
     setShow(!show);
   };
@@ -31,7 +32,7 @@ const Portfolio = (props) => {
           />
         </div>
         <div className={classes.tempCont}>
-          {templet.map((e) => (
+          {selectedTemp.map((e) => (
             <Pcard
               key={e.img}
               title={e.title}
